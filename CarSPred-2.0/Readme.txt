@@ -16,6 +16,15 @@ Datasets available on the site:
 'H-traincarboneg-R.fsa'  - 754 sequences of R negative training samples of human    		37.5KB  
 'H-traincarboneg-T.fsa'  - 702 sequences of T negative training samples of human    		34.9KB  
 'H-traincarboneg-P.fsa'  - 716 sequences of P negative training samples of human    		35.6KB
+2.Sample sequences of Photobacterium and Escherichia coli carbonylation in 'Datasets' folder
+'PE-carbonprotein.xlsx'	  - 85 carbonylated proteins of P.E.                                    11.7KB
+'PE-traincarbonpos-K.fsa' - 18 sequences of K positive training samples of P.E.                 1.0KB
+'PE-traincarbonpos-R.fsa' - 24 sequences of R positive training samples of P.E.    		1.3KB  
+'PE-traincarbonpos-T.fsa' - 56 sequences of T positive training samples of P.E.    		3.0KB  
+'PE-traincarbonpos-P.fsa' - 63 sequences of P positive training samples of P.E.    		3.4KB
+'PE-traincarboneg-K.fsa'  - 110 sequences of K negative training samples of P.E.  		5.8KB
+'PE-traincarboneg-R.fsa'  - 144 sequences of R negative training samples of P.E.    		7.7KB  
+'PE-traincarboneg-T.fsa'  - 355 sequences of T negative training samples of P.E.    		18.9KB  
+'PE-traincarboneg-P.fsa'  - 538 sequences of P negative training samples of P.E.    		28.6KB
 
 For details, refer to the manual coming with the software CarSPred.
-
