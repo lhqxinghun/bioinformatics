@@ -1,15 +1,16 @@
-function RankedFea =  Example(inputfile)
-%Description: Read sample datasets, output ranked candidate features according to FSBMG feature evaluation criterion.
-%inputfile    - Input/Sample files in UCI.
-%RankedFea    - Output/Ranked candidate features.
+function RankedFea =  mRMR(inputfile)
+%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to mRMR criterion.
+%inputfile    - Input/Sample files in UCI format.
+%expfeanum    - Input/The number of ranked features expected.
+%RankedFea    - Output/Ranked features.
 %Example 1:
-%RankedFea =  Example('diabetic.data');
+%RankedFea =  mRMR('diabetic.data');
 %Example 2:
-%RankedFea =  Example('parkinsons.data');
+%RankedFea =  mRMR('parkinsons.data');
 
 %Configuration
 maxbufsize=405900;
-lambda=5;
+magnification=10;
 %Read files
 cd DATA;
 fidinputfile=fopen(inputfile,'r');
@@ -50,31 +51,32 @@ for i=1:row
         end
     end
 end
-%Data prepartion for FSBMG
+%Data prepartion for mRMR
 entrynum=0;
 for i=1:classnum
     for j=1:vectornum(i)
         entrynum=entrynum+1;
         for m=1:fealen
-            fearray(entrynum,m)=rawfeavector{i}{j,m};
+            fearray(entrynum,m)=round(rawfeavector{i}{j,m}*magnification);
         end
         classflag(entrynum,1)=i;
     end
 end
-clearvars -except fearray classflag entrynum fealen lambda;
-%FSBMG feature selection
+clear inputline1 inputline2 rawfeavector;
+%mRMR feature selection
+cd mRMR;
 
 %Paramater for UCI data(medium-dimensional)
 begintime=cputime;
-RankedFea = FSBMG(fearray,classflag,fealen,fealen)
+RankedFea=mrmr_mid_d(fearray,classflag,fealen)
 runtime=cputime-begintime
 
 % %Paramater for GEMS and GEO data(high-dimensional, P>>N)
 % begintime=cputime;
-% psfeanum=floor(lambda*entrynum/log10(entrynum));
 % expfeanum=200;
-% RankedFea = FSBMG(fearray,classflag,psfeanum,expfeanum)
+% RankedFea=mrmr_mid_d(fearray,classflag,expfeanum)
 % runtime=cputime-begintime
 
+cd ..;
 clear;
 end

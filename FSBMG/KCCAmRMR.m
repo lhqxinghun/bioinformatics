@@ -1,15 +1,15 @@
-function RankedFea =  Example(inputfile)
-%Description: Read sample datasets, output ranked candidate features according to FSBMG feature evaluation criterion.
-%inputfile    - Input/Sample files in UCI.
-%RankedFea    - Output/Ranked candidate features.
+function RankedFea =  KCCAmRMR(inputfile)
+%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to KCCAmRMR criterion.
+%inputfile    - Input/Sample files in UCI format.
+%expfeanum    - Input/The number of ranked features expected.
+%RankedFea    - Output/Ranked features.
 %Example 1:
-%RankedFea =  Example('diabetic.data');
+%RankedFea =  KCCAmRMR('diabetic.data');
 %Example 2:
-%RankedFea =  Example('parkinsons.data');
+%RankedFea =  KCCAmRMR('parkinsons.data');
 
 %Configuration
 maxbufsize=405900;
-lambda=5;
 %Read files
 cd DATA;
 fidinputfile=fopen(inputfile,'r');
@@ -50,7 +50,7 @@ for i=1:row
         end
     end
 end
-%Data prepartion for FSBMG
+%Data prepartion for KCCAmRMR
 entrynum=0;
 for i=1:classnum
     for j=1:vectornum(i)
@@ -61,20 +61,23 @@ for i=1:classnum
         classflag(entrynum,1)=i;
     end
 end
-clearvars -except fearray classflag entrynum fealen lambda;
-%FSBMG feature selection
+clear inputline1 inputline2 rawfeavector;
+%KCCAmRMR feature selection
+cd KCCAmRMR;
 
 %Paramater for UCI data(medium-dimensional)
 begintime=cputime;
-RankedFea = FSBMG(fearray,classflag,fealen,fealen)
+mbins=100;
+RankedFea=kccamrmr(fearray,classflag',mbins,fealen)
 runtime=cputime-begintime
 
 % %Paramater for GEMS and GEO data(high-dimensional, P>>N)
 % begintime=cputime;
-% psfeanum=floor(lambda*entrynum/log10(entrynum));
+% mbins=100;
 % expfeanum=200;
-% RankedFea = FSBMG(fearray,classflag,psfeanum,expfeanum)
+% RankedFea=kccamrmr(fearray,classflag',mbins,expfeanum)
 % runtime=cputime-begintime
 
+cd ..;
 clear;
 end
