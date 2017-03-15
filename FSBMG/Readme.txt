@@ -5,7 +5,7 @@ mRMR.m      - code for the filter feature selection method mRMR.
 KCCAmRMR.m  - code for the filter feature selection method KCCAmRMR.
 Example.m   - code for the demo which shows how FSBMG.m is called.
 2. Source code in subfolder
-'MINE'      - directory for subroutines that support FSBMG.m, especially modified MIC (modifications have been annotated in the code).
+'MINE'      - directory for subroutines that support FSBMG.m, especially adjusted MIC (adjustments have been annotated in the code).
 'mRMR'      - directory for subroutines that support mRMR.m.
 'KCCAmRMR'  - directory for subroutines that support KCCAmRMR.m.
 
