@@ -1,11 +1,11 @@
-function RankedFea =  mRMR(inputfile)
-%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to mRMR criterion.
+function RankedFea =  QPFS(inputfile)
+%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to QPFS criterion.
 %inputfile    - Input/Sample files in UCI format.
 %RankedFea    - Output/Ranked features.
 %Example 1:
-%RankedFea =  mRMR('diabetic.data');
+%RankedFea =  QPFS('diabetic.data');
 %Example 2:
-%RankedFea =  mRMR('parkinsons.data');
+%RankedFea =  QPFS('parkinsons.data');
 
 %Configuration
 maxbufsize=405900;
@@ -50,32 +50,60 @@ for i=1:row
         end
     end
 end
-%Data prepartion for mRMR
+%Data prepartion for QPFS
 entrynum=0;
 for i=1:classnum
     for j=1:vectornum(i)
         entrynum=entrynum+1;
         for m=1:fealen
-            fearray(entrynum,m)=round(rawfeavector{i}{j,m}*magnification);
+            fearray(entrynum,m)=rawfeavector{i}{j,m};
         end
-        classflag(entrynum,1)=i;
+        classflag(entrynum)=i;
     end
 end
+fearray=QuantileDiscretize(fearray,magnification);
 clear inputline1 inputline2 rawfeavector;
-%mRMR feature selection
-cd mRMR;
+%QPFS feature selection
+cd QPFS;
 
 %Paramater for UCI data(medium-dimensional)
 begintime=cputime;
-RankedFea=mrmr_mid_d(fearray,classflag,fealen)
+QPFSFS=myQPFS(fearray,classflag');
 runtime=cputime-begintime
+expfeanum=fealen;
 
 % %Paramater for GEMS and GEO data(high-dimensional, P>>N)
 % begintime=cputime;
-% expfeanum=200;
-% RankedFea=mrmr_mid_d(fearray,classflag,expfeanum)
+% QPFSFS=myQPFS(fearray,classflag');
 % runtime=cputime-begintime
+% expfeanum=200;
 
 cd ..;
+RankedFea=QPFSFS';
+RankedFea=RankedFea(1:expfeanum);
 clear;
+end
+
+function b=QuantileDiscretize(a,d)
+if nargin<2 d=3;end;
+
+[n dim]=size(a);
+b=zeros(n,dim);
+for i=1:dim
+   b(:,i)=doDiscretize(a(:,i),d);
+end
+b=b+1;
+end
+
+% ----------------------------------------
+function y_discretized= doDiscretize(y,d)
+% ----------------------------------------
+% discretize a vector
+ys=sort(y);
+y_discretized=y;
+
+pos=ys(round(length(y)/d *[1:d]));
+for j=1:length(y)
+    y_discretized(j)=sum(y(j)>pos);
+end
 end

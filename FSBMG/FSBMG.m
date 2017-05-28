@@ -46,13 +46,13 @@ for i=1:actexpfeanum-1
             temporthvector(:,index1)=temporthvector(:,index1)./norm(temporthvector(:,index1));
         end     
     end
-    %Computer Min-Redundancy   
-    [MinRedFeaNum,MinRedMICValue] = MIC(temporthvector,classflag',index1);
+    %Computer Max-Relevance and Min-Redundancy   
+    [MaxRelMinRedFeaNum,MaxRelMinRedMICValue] = MIC(temporthvector,classflag',index1);
     index2=0;
     for j=1:len-1
         if(candfeaflag(j)==1)
           index2=index2+1;
-          tempFSMICscore(index2)=MaxRelMICValue(j+1)+MinRedMICValue(find(MinRedFeaNum==index2));
+          tempFSMICscore(index2)=MaxRelMinRedMICValue(find(MaxRelMinRedFeaNum==index2));
           tempFSMICnum(index2)=MaxRelFeaNum(j+1);
         end
     end

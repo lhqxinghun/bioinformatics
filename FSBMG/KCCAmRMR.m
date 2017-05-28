@@ -1,7 +1,6 @@
 function RankedFea =  KCCAmRMR(inputfile)
 %Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to KCCAmRMR criterion.
 %inputfile    - Input/Sample files in UCI format.
-%expfeanum    - Input/The number of ranked features expected.
 %RankedFea    - Output/Ranked features.
 %Example 1:
 %RankedFea =  KCCAmRMR('diabetic.data');
