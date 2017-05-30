@@ -1,12 +1,12 @@
-function RankedFea = FSBMG(fearray,classflag,psfeanum,expfeanum)
-%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to FSBMG criterion.
+function RankedFea = OMICFS(fearray,classflag,psfeanum,expfeanum)
+%Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to OMICFS criterion.
 %fearray      - Input/m*n feature array, in which m is the number of samples and n is the total number of candidate features.
 %classflag    - Input/m*1 vector, each element in the vector is the flag number of the class it belongs to.
 %psfeanum     - Input/The number of pre-screening features (psfeanum = expfeanum = the number of all features: means all the features are expected to be ranked).
 %expfeanum    - Input/The number of ranked features expected.
 %RankedFea    - Output/Ranked features.
 %Example:
-%RankedFea = FSBMG(fearray,classflag,psfeanum,expfeanum);
+%RankedFea = OMICFS(fearray,classflag,psfeanum,expfeanum);
 
 %Check the input parameters 
 if (psfeanum<expfeanum)

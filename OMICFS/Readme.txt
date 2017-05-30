@@ -1,12 +1,12 @@
 Source code available on the site:
 1. Source code in current folder
-FSBMG.m     - code for the proposed filter feature selection method FSBMG.
+OMICFS.m    - code for the proposed filter feature selection method OMICFS.
 mRMR.m      - code for the filter feature selection method mRMR.
 KCCAmRMR.m  - code for the filter feature selection method KCCAmRMR.
 QPFS.m      - code for the filter feature selection method QPFS.
-Example.m   - code for the demo which shows how FSBMG.m is called.
+Example.m   - code for the demo which shows how OMICFS.m is called.
 2. Source code in subfolder
-'MINE'      - directory for subroutines that support FSBMG.m, especially adjusted MIC (adjustments have been annotated in the code).
+'MINE'      - directory for subroutines that support OMICFS.m, especially adjusted MIC (adjustments have been annotated in the code).
 'mRMR'      - directory for subroutines that support mRMR.m.
 'KCCAmRMR'  - directory for subroutines that support KCCAmRMR.m.
 'QPFS'      - directory for subroutines that support QPFS.m.

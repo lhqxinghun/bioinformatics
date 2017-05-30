@@ -1,5 +1,5 @@
 function RankedFea =  Example(inputfile)
-%Description: Read sample datasets, output ranked candidate features according to FSBMG feature evaluation criterion.
+%Description: Read sample datasets, output ranked candidate features according to OMICFS feature evaluation criterion.
 %inputfile    - Input/Sample files in UCI.
 %RankedFea    - Output/Ranked candidate features.
 %Example 1:
@@ -50,7 +50,7 @@ for i=1:row
         end
     end
 end
-%Data prepartion for FSBMG
+%Data prepartion for OMICFS
 entrynum=0;
 for i=1:classnum
     for j=1:vectornum(i)
@@ -62,18 +62,18 @@ for i=1:classnum
     end
 end
 clearvars -except fearray classflag entrynum fealen lambda;
-%FSBMG feature selection
+%OMICFS feature selection
 
 %Paramater for UCI data(medium-dimensional)
 begintime=cputime;
-RankedFea = FSBMG(fearray,classflag,fealen,fealen)
+RankedFea = OMICFS(fearray,classflag,fealen,fealen)
 runtime=cputime-begintime
 
 % %Paramater for GEMS and GEO data(high-dimensional, P>>N)
 % begintime=cputime;
 % psfeanum=floor(lambda*entrynum/log10(entrynum));
 % expfeanum=200;
-% RankedFea = FSBMG(fearray,classflag,psfeanum,expfeanum)
+% RankedFea = OMICFS(fearray,classflag,psfeanum,expfeanum)
 % runtime=cputime-begintime
 
 clear;
