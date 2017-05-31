@@ -2,10 +2,8 @@ function RankedFea =  mRMR(inputfile)
 %Description: Read matrices containing feature and class information of samples, output a specific number of ranked features according to mRMR criterion.
 %inputfile    - Input/Sample files in UCI format.
 %RankedFea    - Output/Ranked features.
-%Example 1:
+%Example:
 %RankedFea =  mRMR('diabetic.data');
-%Example 2:
-%RankedFea =  mRMR('parkinsons.data');
 
 %Configuration
 maxbufsize=405900;

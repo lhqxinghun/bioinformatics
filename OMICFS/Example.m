@@ -2,10 +2,8 @@ function RankedFea =  Example(inputfile)
 %Description: Read sample datasets, output ranked candidate features according to OMICFS feature evaluation criterion.
 %inputfile    - Input/Sample files in UCI.
 %RankedFea    - Output/Ranked candidate features.
-%Example 1:
+%Example:
 %RankedFea =  Example('diabetic.data');
-%Example 2:
-%RankedFea =  Example('parkinsons.data');
 
 %Configuration
 maxbufsize=405900;
