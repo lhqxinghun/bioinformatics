@@ -1,0 +1,165 @@
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("zerofilter.R")
+source("zerorecover.R")
+source("normICEfun.R")
+
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/2.5M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/2.5M/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=2500000)
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/1M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/1M/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=1000000)
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/500K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/500K/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=500000)
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/250K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/250K/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=250000)
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/100K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/100K/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=100000)
+hicnormalized <- normICEfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/50K/ICE", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=50000)
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("normchromoRfun.R")
+
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/2.5M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/2.5M/chromoR", species="hg19", chr="chr14", resolution=2500000)
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/1M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/1M/chromoR", species="hg19", chr="chr14", resolution=1000000)
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/500K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/500K/chromoR", species="hg19", chr="chr14", resolution=500000)
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/250K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/250K/chromoR", species="hg19", chr="chr14", resolution=250000)
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/100K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/100K/chromoR", species="hg19", chr="chr14", resolution=100000)
+hicnormalized <- normchromoRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/50K/chromoR", species="hg19", chr="chr14", resolution=50000)
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("zerofilter.R")
+source("zerorecover.R")
+source("normSCNfun.R")
+
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/2.5M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/2.5M/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=2500000)
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/1M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/1M/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=1000000)
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/500K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/500K/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=500000)
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/250K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/250K/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=250000)
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/100K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/100K/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=100000)
+hicnormalized <- normSCNfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/50K/SCN", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=50000)
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("zerofilter.R")
+source("zerorecover.R")
+source("normHiCNormfun.R")
+
+enzymes <- c("MboI", "MboI", "MboI", "MboI", "MboI", "MboI", "HindIII","HindIII","HindIII","HindIII", "DpnII","DpnII","DpnII","DpnII","DpnII")#GM12878
+#enzymes <- c("MboI", "MboI", "MboI", "MboI", "MboI", "MboI", "HindIII","HindIII")#IMR90 and K562
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/2.5M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/2.5M/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=2500000, enzymes)
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/1M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/1M/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=1000000, enzymes)
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/500K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/500K/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=500000, enzymes)
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/250K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/250K/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=250000, enzymes)
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/100K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/100K/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=100000, enzymes)
+hicnormalized <- normHiCNormfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr14/50K/HiCNorm", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr14", resolution=50000, enzymes)
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("zerofilter.R")
+source("zerorecover.R")
+source("normKRfun.R")
+
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/2.5M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/2.5M/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=2500000)
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/1M", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/1M/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=1000000)
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/500K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/500K/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=500000)
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/250K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/250K/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=250000)
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/100K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/100K/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=100000)
+hicnormalized <- normKRfun(dirin="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/50K", dirout="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/50K/KR", dirtemp="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp", species="hg19", chr="chr1", resolution=50000)
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("normHiCcompare2fun.R")
+
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/2.5M", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/2.5M",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/2.5M",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/2.5M/HiCcompare2",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/2.5M/HiCcompare2",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/2.5M/HiCcompare2", species="hg19", chr="chr18", resolution=2500000)
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/1M",
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/1M",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/1M",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/1M/HiCcompare2",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/1M/HiCcompare2",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/1M/HiCcompare2", species="hg19", chr="chr18", resolution=1000000)
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/500K",
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/500K",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/500K",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/500K/HiCcompare2",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/500K/HiCcompare2",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/500K/HiCcompare2", species="hg19", chr="chr18", resolution=500000)
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/250K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/250K", 
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/250K", 
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/250K/HiCcompare2",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/250K/HiCcompare2",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/250K/HiCcompare2", species="hg19", chr="chr18", resolution=250000)
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/100K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/100K", 
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/100K", 
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/100K/HiCcompare2", 
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/100K/HiCcompare2", 
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/100K/HiCcompare2", species="hg19", chr="chr18", resolution=100000)
+hicnormalized <- normHiCcompare2fun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/50K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/50K",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr18/50K",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr18/50K/HiCcompare2",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr18/50K/HiCcompare2",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr18/50K/HiCcompare2", species="hg19", chr="chr18", resolution=50000)
+
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicnormcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("zerofilter.R")
+source("zerorecover.R")
+source("normbnbcfun.R")
+
+enzymes <- c("MboI", "MboI", "MboI", "MboI", "MboI", "MboI", "HindIII","HindIII","HindIII","HindIII", "DpnII","DpnII","DpnII","DpnII","DpnII",
+             "MboI", "MboI", "MboI", "MboI", "MboI", "MboI", "HindIII","HindIII","MboI", "MboI", "MboI", "MboI", "MboI", "MboI", "HindIII","HindIII")#GM12878+IMR90+mES
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/2.5M", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/2.5M",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/2.5M",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/2.5M/bnbc",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/2.5M/bnbc",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/2.5M/bnbc", species="hg19", chr="chr1", resolution=2500000, batch=enzymes)
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/1M",
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/1M",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/1M",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/1M/bnbc",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/1M/bnbc",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/1M/bnbc", species="hg19", chr="chr1", resolution=1000000, batch=enzymes)
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/500K",
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/500K",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/500K",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/500K/bnbc",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/500K/bnbc",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/500K/bnbc", species="hg19", chr="chr1", resolution=500000, batch=enzymes)
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/250K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/250K", 
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/250K", 
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/250K/bnbc",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/250K/bnbc",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/250K/bnbc", species="hg19", chr="chr1", resolution=250000, batch=enzymes)
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/100K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/100K", 
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/100K", 
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/100K/bnbc", 
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/100K/bnbc", 
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/100K/bnbc", species="hg19", chr="chr1", resolution=100000, batch=enzymes)
+hicnormalized <- normbnbcfun(dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/50K", 
+dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/50K",
+dirin3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/K562/chr1/50K",
+dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/GM12878/chr1/50K/bnbc",
+dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/IMR90/chr1/50K/bnbc",
+dirout3="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/K562/chr1/50K/bnbc", species="hg19", chr="chr1", resolution=50000, batch=enzymes)
