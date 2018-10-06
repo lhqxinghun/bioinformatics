@@ -23,14 +23,16 @@
          normSCNfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000)
 
 2> normHiCNormfun.R<br>
- Function: Implementation of HiCNorm method<br> 
- Depends:./sparse2matrix.R (provided)<br>
-         ./gethicobjlist.R (provided)<br>
-         R (>= 3.5.1)<br>
-         BSgenome.Hsapiens.UCSC.hg19 (R package, 1.4.0)<br>
-         BSgenome.Mmusculus.UCSC.mm9 (R package, 1.4.0)<br>
-         HiTC (R package, 1.24.0)<br>
-         Mappability files corresponding to hg19 and mm9 (Placed in extdata folder of HiTC)<br>
+ Function:<br>
+ 　　　　Implementation of HiCNorm method<br> 
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　BSgenome.Hsapiens.UCSC.hg19 (R package, 1.4.0)<br>
+ 　　　　BSgenome.Mmusculus.UCSC.mm9 (R package, 1.4.0)<br>
+ 　　　　HiTC (R package, 1.24.0)<br>
+ 　　　　Mappability files corresponding to hg19 and mm9 (Placed in extdata folder of HiTC)<br>
  Example:
          
          rm(list=ls())
@@ -44,11 +46,13 @@
          normHiCNormfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000, enzymes=enzymes)
 
 3> normICEfun.R<br>
- Function: Implementation of ICE method<br>
- Depends: ./sparse2matrix.R (provided)<br>
-         ./gethicobjlist.R (provided)<br>
-         R (>= 3.5.1)<br>
-         HiTC (R package, 1.24.0)<br>
+ Function:<br>
+ 　　　　Implementation of ICE method<br>
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　HiTC (R package, 1.24.0)<br>
  Example:
  
          rm(list=ls())
@@ -61,15 +65,17 @@
          normICEfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr14", resolution=1000000)
 
 4> normKRfun.R<br>
- Function: Implementation of KR method<br>
- Depends: ./sparse2matrix.R (provided)<br>
-         ./gethicobjlist.R (provided)<br>
-         ./zerofilter.R (provided)<br>
-         ./zerorecover.R (provided)<br>
-         ./KR_bnewt.m (provided)<br>
-         R (>= 3.5.1)<br>
-         R.matlab (R package, )<br>
-         MATALB (>= 8.6.0.267246 (R2015b))<br>
+ Function:<br>
+ 　　　　Implementation of KR method<br>
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　./zerofilter.R (provided)<br>
+ 　　　　./zerorecover.R (provided)<br>
+ 　　　　./KR_bnewt.m (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　R.matlab (R package, )<br>
+ 　　　　MATALB (>= 8.6.0.267246 (R2015b))<br>
  Example:
  
          rm(list=ls())
@@ -84,11 +90,13 @@
          normKRfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000)
 
 5> normchromoRfun.R<br>
- Function: Implementation of chromoR method<br>
- Depends: ./sparse2matrix.R (provided)<br>
-         ./gethicobjlist.R (provided)<br>
-         R (>= 3.5.1)<br>
-         chromoR (R package, 1.0)<br>
+ Function:<br>
+ 　　　　Implementation of chromoR method<br>
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　chromoR (R package, 1.0)<br>
  Example:
  
          rm(list=ls())
@@ -100,11 +108,13 @@
          normchromoRfun(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr14", resolution=1000000)
 
 6> normmultiHiCcomparefun.R<br>
- Function: Implementation of multiHiCcompare method<br>
- Depends: ./sparse2matrix.R (provided)<br>
-         ./gethicobjlist.R (provided)<br>
-         R (>= 3.5.1)<br>
-         multiHiCcompare (R package, 0.99.9)<br>
+ Function:<br>
+ 　　　　Implementation of multiHiCcompare method<br>
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　multiHiCcompare (R package, 0.99.9)<br>
  Example:
  
          rm(list=ls())
@@ -123,9 +133,11 @@
 2. Source code for logCPM transformation. The code has been tested under Ubuntu14.04 LTS.
 
  1> logCPM.R<br>
- Function: Implementation of logCPM transformation<br>
- Depends: ./sparse2matrix.R (provided)<br>
-         R (>= 3.5.1)<br>
+ Function:<br>
+ 　　　　Implementation of logCPM transformation<br>
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
  Example:
  
          rm(list=ls())
