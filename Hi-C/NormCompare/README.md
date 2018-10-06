@@ -1,4 +1,4 @@
-1. Source code for six H-C normalization methods. The code has been tested under Ubuntu14.04 LTS.
+１. Source code for six H-C normalization methods. The code has been tested under Ubuntu14.04 LTS.
 
 1> normSCNfun.R<br>
  Function:<br>
@@ -11,7 +11,7 @@
  　　　　R (>= 3.5.1)<br>
  　　　　R.matlab (R package, )<br>
  　　　　MATALB (>= 8.6.0.267246 (R2015b))<br>
- Example:<br>
+ Example:
  
          rm(list=ls())
          source("sparse2matrix.R")
@@ -22,17 +22,15 @@
          dirtemp <- ./data/temp
          normSCNfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000)
 
-2> normHiCNormfun.R
-
- Function: Implementation of HiCNorm method
- 
- Depends:./sparse2matrix.R (provided)
-         ./gethicobjlist.R (provided)
-         R (>= 3.5.1)
-         BSgenome.Hsapiens.UCSC.hg19 (R package, 1.4.0)
-         BSgenome.Mmusculus.UCSC.mm9 (R package, 1.4.0)
-         HiTC (R package, 1.24.0)
-         Mappability files corresponding to hg19 and mm9 (Placed in extdata folder of HiTC)
+2> normHiCNormfun.R<br>
+ Function: Implementation of HiCNorm method<br> 
+ Depends:./sparse2matrix.R (provided)<br>
+         ./gethicobjlist.R (provided)<br>
+         R (>= 3.5.1)<br>
+         BSgenome.Hsapiens.UCSC.hg19 (R package, 1.4.0)<br>
+         BSgenome.Mmusculus.UCSC.mm9 (R package, 1.4.0)<br>
+         HiTC (R package, 1.24.0)<br>
+         Mappability files corresponding to hg19 and mm9 (Placed in extdata folder of HiTC)<br>
  Example:
          
          rm(list=ls())
@@ -45,12 +43,12 @@
          enzymes <- c("MboI","MboI"," MboI"," MboI"," MboI"," MboI")
          normHiCNormfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000, enzymes=enzymes)
 
-3> normICEfun.R
- Function: Implementation of ICE method
- Depends: ./sparse2matrix.R (provided)
-         ./gethicobjlist.R (provided)
-         R (>= 3.5.1)
-         HiTC (R package, 1.24.0)
+3> normICEfun.R<br>
+ Function: Implementation of ICE method<br>
+ Depends: ./sparse2matrix.R (provided)<br>
+         ./gethicobjlist.R (provided)<br>
+         R (>= 3.5.1)<br>
+         HiTC (R package, 1.24.0)<br>
  Example:
  
          rm(list=ls())
@@ -62,16 +60,16 @@
          dirtemp <- ./data/temp
          normICEfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr14", resolution=1000000)
 
-4> normKRfun.R
- Function: Implementation of KR method
- Depends: ./sparse2matrix.R (provided)
-         ./gethicobjlist.R (provided)
-         ./zerofilter.R (provided)
-         ./zerorecover.R (provided)
-         ./KR_bnewt.m (provided)
-         R (>= 3.5.1)
-         R.matlab (R package, )
-         MATALB (>= 8.6.0.267246 (R2015b))
+4> normKRfun.R<br>
+ Function: Implementation of KR method<br>
+ Depends: ./sparse2matrix.R (provided)<br>
+         ./gethicobjlist.R (provided)<br>
+         ./zerofilter.R (provided)<br>
+         ./zerorecover.R (provided)<br>
+         ./KR_bnewt.m (provided)<br>
+         R (>= 3.5.1)<br>
+         R.matlab (R package, )<br>
+         MATALB (>= 8.6.0.267246 (R2015b))<br>
  Example:
  
          rm(list=ls())
@@ -85,12 +83,12 @@
          dirtemp <- ./data/temp
          normKRfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000)
 
-5> normchromoRfun.R
- Function: Implementation of chromoR method
- Depends: ./sparse2matrix.R (provided)
-         ./gethicobjlist.R (provided)
-         R (>= 3.5.1)
-         chromoR (R package, 1.0)
+5> normchromoRfun.R<br>
+ Function: Implementation of chromoR method<br>
+ Depends: ./sparse2matrix.R (provided)<br>
+         ./gethicobjlist.R (provided)<br>
+         R (>= 3.5.1)<br>
+         chromoR (R package, 1.0)<br>
  Example:
  
          rm(list=ls())
@@ -101,12 +99,12 @@
          dirout1 <- ./data/output/GM12878/chr1/1M
          normchromoRfun(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr14", resolution=1000000)
 
-6> normmultiHiCcomparefun.R
- Function: Implementation of multiHiCcompare method
- Depends: ./sparse2matrix.R (provided)
-         ./gethicobjlist.R (provided)
-         R (>= 3.5.1)
-         multiHiCcompare (R package, 0.99.9)
+6> normmultiHiCcomparefun.R<br>
+ Function: Implementation of multiHiCcompare method<br>
+ Depends: ./sparse2matrix.R (provided)<br>
+         ./gethicobjlist.R (provided)<br>
+         R (>= 3.5.1)<br>
+         multiHiCcompare (R package, 0.99.9)<br>
  Example:
  
          rm(list=ls())
@@ -124,10 +122,10 @@
 
 2. Source code for logCPM transformation. The code has been tested under Ubuntu14.04 LTS.
 
- 1> logCPM.R
- Function: Implementation of logCPM transformation
- Depends: ./sparse2matrix.R (provided)
-         R (>= 3.5.1)
+ 1> logCPM.R<br>
+ Function: Implementation of logCPM transformation<br>
+ Depends: ./sparse2matrix.R (provided)<br>
+         R (>= 3.5.1)<br>
  Example:
  
          rm(list=ls())
@@ -139,15 +137,15 @@
 
 
 3. Datasets for examples. The data has been tested under Ubuntu14.04 LTS.
- 1> input
- ./input/GM12878/chr1/1M
- ./input/IMR90/chr1/1M
- ./input/K562/chr1/1M
-2> output
- ./output /GM12878/chr1/1M
- ./output /IMR90/chr1/1M
- ./output /K562/chr1/1M
-3> logCPM
- ./logCPM /GM12878/chr1/1M
- ./logCPM /IMR90/chr1/1M
- ./logCPM /K562/chr1/1M
+ 1> input<br>
+ ./input/GM12878/chr1/1M<br>
+ ./input/IMR90/chr1/1M<br>
+ ./input/K562/chr1/1M<br>
+2> output<br>
+ ./output /GM12878/chr1/1M<br>
+ ./output /IMR90/chr1/1M<br>
+ ./output /K562/chr1/1M<br>
+3> logCPM<br>
+ ./logCPM /GM12878/chr1/1M<br>
+ ./logCPM /IMR90/chr1/1M<br>
+ ./logCPM /K562/chr1/1M<br>
