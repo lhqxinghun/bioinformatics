@@ -130,7 +130,7 @@
          normultiHiCcomparefun(dirin1=dirin1, dirin2=dirin2, dirin3=dirin3, dirout1=dirout1, dirout2=dirout2, dirout3=dirout3, species="hg19", chr="chr1", resolution=1000000)
 
 
-2. Source code for logCPM transformation. The code has been tested under Ubuntu14.04 LTS.
+２. Source code for logCPM transformation. The code has been tested under Ubuntu14.04 LTS.
 
  1> logCPM.R<br>
  Function:<br>
@@ -148,7 +148,7 @@
          logCPM(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr1", resolution=1000000, bsparse=TRUE, bmodified=TRUE)
 
 
-3. Datasets for examples. The data has been tested under Ubuntu14.04 LTS.
+３. Datasets for examples. The data has been tested under Ubuntu14.04 LTS.<br>
  1> input<br>
  ./input/GM12878/chr1/1M<br>
  ./input/IMR90/chr1/1M<br>
