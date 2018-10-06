@@ -1,10 +1,8 @@
 1. Source code for six H-C normalization methods. The code has been tested under Ubuntu14.04 LTS.
 
- 1> normSCNfun.R 
- 
+1> normSCNfun.R<br>
  Function:<br>
- 　　　　Implementation of SCN method
- 
+ 　　　　Implementation of SCN method<br> 
  Depends:<br>
  　　　　./sparse2matrix.R (provided)<br>
  　　　　./gethicobjlist.R (provided)<br>
@@ -12,9 +10,8 @@
  　　　　./SCN_sumV2.m (provided)<br>
  　　　　R (>= 3.5.1)<br>
  　　　　R.matlab (R package, )<br>
- 　　　　MATALB (>= 8.6.0.267246 (R2015b))
-          
- Example:
+ 　　　　MATALB (>= 8.6.0.267246 (R2015b))<br>
+ Example:<br>
  
          rm(list=ls())
          source("sparse2matrix.R")
