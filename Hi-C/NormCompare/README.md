@@ -2,7 +2,7 @@
 
  1> normSCNfun.R
  Function: Implementation of SCN method
- Depends: ./sparse2matrix.R (provided)
+ Depends:./sparse2matrix.R (provided)
          ./gethicobjlist.R (provided)
          ./utilities/ scriptforSCN.sh (provided)
          ./SCN_sumV2.m (provided)
