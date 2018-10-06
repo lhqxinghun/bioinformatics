@@ -1,6 +1,6 @@
 1. Source code for six H-C normalization methods. The code has been tested under Ubuntu14.04 LTS.
 
- 1> normSCNfun.R
+ 1> normSCNfun.R 
  
  Function: Implementation of SCN method
  
@@ -10,7 +10,8 @@
           ./SCN_sumV2.m (provided)         
           R (>= 3.5.1)         
           R.matlab (R package, )         
-          MATALB (>= 8.6.0.267246 (R2015b))         
+          MATALB (>= 8.6.0.267246 (R2015b))
+          
  Example:
  
          rm(list=ls())
