@@ -2,15 +2,17 @@
 
  1> normSCNfun.R 
  
- Function: Implementation of SCN method
+ Function:<br>
+ 　　　　Implementation of SCN method
  
- Depends:　./sparse2matrix.R (provided)<br>
-　　　　　　./gethicobjlist.R (provided)<br>
-　　　　　　./utilities/ scriptforSCN.sh (provided)<br>
-　　　　　　./SCN_sumV2.m (provided)<br>
-R (>= 3.5.1)<br>
-R.matlab (R package, )<br>
-MATALB (>= 8.6.0.267246 (R2015b))
+ Depends:<br>
+ 　　　　./sparse2matrix.R (provided)<br>
+ 　　　　./gethicobjlist.R (provided)<br>
+ 　　　　./utilities/ scriptforSCN.sh (provided)<br>
+ 　　　　./SCN_sumV2.m (provided)<br>
+ 　　　　R (>= 3.5.1)<br>
+ 　　　　R.matlab (R package, )<br>
+ 　　　　MATALB (>= 8.6.0.267246 (R2015b))
           
  Example:
  
