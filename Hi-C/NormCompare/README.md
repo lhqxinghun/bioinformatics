@@ -4,13 +4,13 @@
  
  Function: Implementation of SCN method
  
- Depends: ./sparse2matrix.R (provided) 
-          ./gethicobjlist.R (provided)         
-          ./utilities/ scriptforSCN.sh (provided)         
-          ./SCN_sumV2.m (provided)         
-          R (>= 3.5.1)         
-          R.matlab (R package, )         
-          MATALB (>= 8.6.0.267246 (R2015b))
+ Depends:　./sparse2matrix.R (provided)<br>
+　　　　　　./gethicobjlist.R (provided)<br>
+　　　　　　./utilities/ scriptforSCN.sh (provided)<br>
+　　　　　　./SCN_sumV2.m (provided)<br>
+R (>= 3.5.1)<br>
+R.matlab (R package, )<br>
+MATALB (>= 8.6.0.267246 (R2015b))
           
  Example:
  
