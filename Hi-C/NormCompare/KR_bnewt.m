@@ -13,7 +13,7 @@
   % RES: residual error, measured by norm(diag(x)*A*x - e).
 
   %add by Hongqiang Lyu
-  load('/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp/tempmatrix-preKR.mat');
+  load('./data/temp/tempmatrix-preKR.mat');
   
   % Initialise
   n = size(A,1); e = ones(n,1); res=[];
@@ -99,5 +99,5 @@
   
   %add by Hongqiang Lyu
   normatrix = diag(x)*A*diag(x);
-  save('/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/data/temp/tempmatrix-aftKR.mat', 'normatrix');
+  save('./data/temp/tempmatrix-aftKR.mat', 'normatrix');
   

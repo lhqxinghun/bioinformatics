@@ -1,4 +1,4 @@
-logCPM <- function(dirin, species, chr, resolution, bsparse, bmodified, dirout) 
+logCPM <- function(dirin, dirout, species, chr, resolution, bsparse, bmodified) 
 {
   switch(species,
     hg19=
