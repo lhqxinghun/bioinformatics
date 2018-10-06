@@ -62,7 +62,7 @@
          dirin1 <- "./data/input/GM12878/chr1/1M"
          dirout1 <- "./data/output/GM12878/chr1/1M"
          dirtemp <- "./data/temp"
-         normICEfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr14", resolution=1000000)
+         normICEfun(dirin=dirin1, dirout=dirout1, dirtemp=dirtemp, species="hg19", chr="chr1", resolution=1000000)
 
 4> normKRfun.R<br>
  Function:<br>
@@ -105,7 +105,7 @@
          source("normchromoRfun.R")
          dirin1 <- "./data/input/GM12878/chr1/1M"
          dirout1 <- "./data/output/GM12878/chr1/1M"
-         normchromoRfun(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr14", resolution=1000000)
+         normchromoRfun(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr1", resolution=1000000)
 
 6> normmultiHiCcomparefun.R<br>
  Function:<br>
