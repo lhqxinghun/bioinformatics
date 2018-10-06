@@ -120,7 +120,7 @@
          rm(list=ls())
          source("sparse2matrix.R")
          source("gethicobjlist.R")
-         source("normultiHiCcompare.R")
+         source("normultiHiCcomparefun.R")
          dirin1 <- "./data/input/GM12878/chr1/1M"
          dirin2 <- "./data/input/IMR90/chr1/1M"
          dirin3 <- "./data/input/K562/chr1/1M"
