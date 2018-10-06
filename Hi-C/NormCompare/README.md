@@ -145,7 +145,7 @@
          source("logCPM.R")
          dirin1 <- "./data/output/GM12878/chr1/1M"
          dirout1 <- "./data/logCPM/GM12878/chr1/1M"
-         logCPM(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr1", resolution=1000000, bsparse=TRUE, bmodified=TRUE)
+         logCPM(dirin=dirin1, dirout=dirout1, species="hg19", chr="chr1", resolution=1000000, bsparse=FALSE, bmodified=TRUE)
 
 
 ３. Datasets for examples. The data has been tested under Ubuntu14.04 LTS.<br>
