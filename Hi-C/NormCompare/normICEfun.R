@@ -1,23 +1,20 @@
+#function name:normICEfun
+#function:read data from disks and use the method ICE to normalize data
+#parameters:
+#             dirin:the path of input data
+#             dirout:the path of output result
+#             dirtemp:the path of temporary data
+#             species:hg19 or mm9 
+#             chr:the numberID of the chromosome
+#             resolution:the resolution of input data
 normICEfun <- function(dirin, dirout, dirtemp, species, chr, resolution) 
 {
   require(HiTC)
-  
+  #read data from disks and transform data to the data format of ICE
   hicobjlist <- gethicobjlist(dirin, species, chr, resolution, normethod="ICE")
+  #function:use the method of ICE to normalize data
   ICEformat <- function(i)
   {
-    # filtedobj <- zerofilter(as.matrix(hicobjlist[[i]]))
-    # #cat(paste0("#GMBothall.0.maq.",basename(dir),".hm.newtracks12forBryan.heatmap.matrix.tab\n\t"),file=paste0(dirname(dir),"/temp/",names(hicobjlist)[i]))
-    # #write.table(hicobjlist[[i]], paste0(dirname(dir),"/temp/",names(hicobjlist)[i]), append=TRUE, quote=FALSE, sep = "\t")
-    # write.table(filtedobj$matrix, paste0(dirname(dir),"/temp/",names(hicobjlist)[i],"-ICE",".txt"), quote=FALSE, sep = "\t")
-    # datalist <- sapply(list.files(paste0(dirname(dir),"/temp"), pattern=paste0(names(hicobjlist)[i],"-ICE",".txt"), full.names=TRUE), import.my5C)
-    # hiC <- HTClist(datalist)
-    # hiC <- hiC[isIntraChrom(hiC)]
-    # hicnorm <- HTClist(lapply(hiC, normICE))
-    # recoveredhicnorm <- zerorecover(as.matrix(hicnorm[[1]]@intdata), filtedobj)
-    # write.table(round(recoveredhicnorm, digits=6), paste0(dirname(dir),"/result/normalized/",names(hicobjlist)[i],"-ICE.txt"), row.names = FALSE, col.names = FALSE, sep = "\t")
-    
-    #cat(paste0("#GMBothall.0.maq.",basename(dir),".hm.newtracks12forBryan.heatmap.matrix.tab\n\t"),file=paste0(dirname(dir),"/temp/",names(hicobjlist)[i]))
-    #write.table(hicobjlist[[i]], paste0(dirname(dir),"/temp/",names(hicobjlist)[i]), append=TRUE, quote=FALSE, sep = "\t")
     write.table(hicobjlist[[i]], paste0(dirtemp,"/",names(hicobjlist)[i],"-ICE",".txt"), quote=FALSE, sep = "\t")
     datalist <- sapply(list.files(dirtemp, pattern=paste0(names(hicobjlist)[i],"-ICE",".txt"), full.names=TRUE), import.my5C)
     hiC <- HTClist(datalist)

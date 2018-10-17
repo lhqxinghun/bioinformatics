@@ -1,8 +1,18 @@
+#function name:normKRfun
+#function:read data from disks and use the method KR to normalize data
+#parameters:
+#             dirin:the path of input data
+#             dirout:the path of output result
+#             dirtemp:the path of temporary data
+#             species:hg19 or mm9 
+#             chr:the numberID of the chromosome
+#             resolution:the resolution of input data
 normKRfun <- function(dirin, dirout, dirtemp, species, chr, resolution) 
 {
   require(R.matlab)
-  
+  #read data from disks and transform data to the data format of KR
   hicobjlist <- gethicobjlist(dirin, species, chr, resolution, normethod="KR")
+  #function:use the method of KR to normalize data
   KRformat <- function(i)
   {
     filtedobj <- zerofilter(as.matrix(hicobjlist[[i]]))

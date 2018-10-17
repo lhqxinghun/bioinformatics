@@ -1,3 +1,8 @@
+#function name:zerorecover
+#function:recover the recorded full zero rows and columns of a matrix after using the function zerofilter
+#parameters:
+#            mat:the input matrix which need to be recovered
+#            filtedobj:the recorded full zero rows or columns of a matrix
 zerorecover <- function(mat, filtedobj) 
 {
   if(is.null(filtedobj$lines) == FALSE)

@@ -1,5 +1,16 @@
+#function name:logCPM
+#function:make the numerical value of results from different normalization methods comparable on log scale
+#parameters:
+#             dirin:the path of input data
+#             dirout:the path of output result
+#             species:hg19 or mm9 
+#             chr:the numberID of the chromosome
+#             resolution:the resolution of input data
+#             bsparse:whether sparse matrix or not,TRUE or FALSE
+#             bmodified: whether to use the modified logCPM, TRUE or FALSE
 logCPM <- function(dirin, dirout, species, chr, resolution, bsparse, bmodified) 
 {
+  #species:hg19 or mm9
   switch(species,
     hg19=
     {
@@ -25,12 +36,14 @@ logCPM <- function(dirin, dirout, species, chr, resolution, bsparse, bmodified)
     }    
   )
   datalist <- sapply(list.files(dirin, pattern=".txt", full.names=TRUE), read.table, sep = "\t", simplify = FALSE, USE.NAMES = TRUE)
+  #if sparse matrix,transform sparse to matrix
   if(bsparse == TRUE)
   {
     datalist <- lapply(datalist, sparse2matrix, dim, resolution)
   }
   namesplit <- strsplit(basename(names(datalist)),split=".",fixed=TRUE)
   names(datalist) <- unlist(lapply(namesplit,head,1))
+  #make the numerical value of results from different normalization methods closer and make the data on the logarithm scale
   CPMfun <- function(i)
   {
     mat <- as.matrix(datalist[[i]])

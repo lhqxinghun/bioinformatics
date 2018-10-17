@@ -1,5 +1,14 @@
+#function name:gethicobjlist
+#function:read data from disk and transform data to the certain format based on the given parameters,such as the resolution,the normethod and so on
+#parameters:
+#           dir:the path of input data
+#           species:hg19 or mm9
+#           chr:the numberID of the chromosome 
+#           resolution:the resolution of input data
+#           normethod:the method of normalization, including SCN, HiCNorm, ICE, KR, chromoR and multiHiCcompare
 gethicobjlist <- function(dir, species, chr, resolution, normethod) 
 {
+  #hg19 or mm9
   switch(species,
     hg19=
     {
@@ -24,6 +33,7 @@ gethicobjlist <- function(dir, species, chr, resolution, normethod)
       dim <- floor(chrlens[chr] / resolution) + 1      
     }    
   )
+  #read data from disks and transform data to matrixs
   tablelist <- sapply(list.files(dir, pattern=".txt", full.names=TRUE), read.table, simplify = FALSE, USE.NAMES = TRUE)
   matrixlist <- lapply(tablelist, sparse2matrix, dim, resolution)
   namesplit <- strsplit(basename(names(tablelist)),split=".",fixed=TRUE)
@@ -31,38 +41,12 @@ gethicobjlist <- function(dir, species, chr, resolution, normethod)
   namesplit <- strsplit(basename(names(matrixlist)),split=".",fixed=TRUE)
   names(matrixlist) <- unlist(lapply(namesplit,head,1))
   
+  #transform data to the certain format based on the given normethod
   switch(normethod,
-    ICE=
-    {
-      options(scipen = 100)
-      start <- seq(0,chrlens[chr],resolution)
-      end <- c(start[1:(length(start)-1)]+resolution-1, chrlens[chr])
-      names <- paste0("HIC_bin", 1:dim, "|hg19mm9|", chr, ":", start, "-", end)
-      setrowcolnames <- function(x)
-      {
-        rownames(x) <- names
-        colnames(x) <- names
-        return(x)
-      }
-      hicobjlist <- lapply(matrixlist, setrowcolnames)
-    },
     SCN=
     {
       options(scipen = 100)
       hicobjlist <- matrixlist
-    },
-    KR=
-    {
-      options(scipen = 100)
-      hicobjlist <- matrixlist
-    },
-    chromoR=
-    {
-      options(scipen = 100)
-      start <- seq(0,chrlens[chr],resolution)
-      end <- c(start[1:(length(start)-1)]+resolution-1, chrlens[chr])
-      seg <- data.frame(chr=chr, start=start, end=end)
-      hicobjlist <- list(matrixlist=matrixlist, seg=seg)
     },
     HiCNorm=
     {
@@ -78,19 +62,38 @@ gethicobjlist <- function(dir, species, chr, resolution, normethod)
       }
       hicobjlist <- lapply(matrixlist, setrowcolnames)
     },
-    HiCcompare2=
-    {
-      options(scipen = 100)
-      tablelist <- lapply(tablelist, function(x) cbind(substr(chr,4,nchar(chr)), x))
-      hicobjlist <- list(tablelist=tablelist, dim=dim)
-    },
-    bnbc=
+    ICE=
     {
       options(scipen = 100)
       start <- seq(0,chrlens[chr],resolution)
       end <- c(start[1:(length(start)-1)]+resolution-1, chrlens[chr])
-      indexdf <- data.frame(chr, start, end)
-      hicobjlist <- list(matrixlist=matrixlist, indexdf=indexdf)
+      names <- paste0("HIC_bin", 1:dim, "|hg19mm9|", chr, ":", start, "-", end)
+      setrowcolnames <- function(x)
+      {
+        rownames(x) <- names
+        colnames(x) <- names
+        return(x)
+      }
+      hicobjlist <- lapply(matrixlist, setrowcolnames)
+    },
+    KR=
+    {
+      options(scipen = 100)
+      hicobjlist <- matrixlist
+    },
+    chromoR=
+    {
+      options(scipen = 100)
+      start <- seq(0,chrlens[chr],resolution)
+      end <- c(start[1:(length(start)-1)]+resolution-1, chrlens[chr])
+      seg <- data.frame(chr=chr, start=start, end=end)
+      hicobjlist <- list(matrixlist=matrixlist, seg=seg)
+    },
+    multiHiCcompare=
+    {
+      options(scipen = 100)
+      tablelist <- lapply(tablelist, function(x) cbind(substr(chr,4,nchar(chr)), x))
+      hicobjlist <- list(tablelist=tablelist, dim=dim)
     }
   )
   return (hicobjlist)

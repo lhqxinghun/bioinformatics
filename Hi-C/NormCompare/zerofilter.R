@@ -1,3 +1,7 @@
+#function name:zerofilter
+#function:filter and record the full zero rows or columns of a matrix
+#parameters:
+#             mat:the input matrix 
 zerofilter <- function(mat) 
 {
   zeros = unique(which(colSums(mat) == 0), which(rowSums(mat) == 0))

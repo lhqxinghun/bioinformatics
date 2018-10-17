@@ -1,3 +1,9 @@
+#function name:sparse2matrix
+#function:transform data from sparse format to matrix format
+#parameters:
+#           sparse:the sparse data
+#           dim:the dimension of matrix
+#           resolution:the resolution of input data
 sparse2matrix <- function(sparse, dim, resolution) 
 {
   sparsetriangular <- sparse;
