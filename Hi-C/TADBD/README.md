@@ -10,12 +10,11 @@ Abstract<br>
   Real data:<br>
  　   Rao, S.S.P., et al. (2014) A 3D Map of the Human Genome at Kilobase Resolution Reveals Principles of Chromatin Looping, Cell, 159,         1665-1680.<br> 
 		
-2> TADBD.R<br>		
-  Function:<br>
- 　   TAD boundary detection<br> 
+2> TADBD<br>		
+  Description:<br>
+ 　   An R package for detection of TAD boundaries<br> 
   Depends:<br>
  　   R (>= 3.5.1)<br>
- 　   TADBD(R package, )<br>
   Example:
  
     rm(list=ls())
