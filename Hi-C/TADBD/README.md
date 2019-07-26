@@ -17,14 +17,14 @@ Abstract<br>
  　TADBD(R package, )<br>
  Example:
  
-   rm(list=ls())
-   library(TADBD)
-   species <- "hg19"
-   chr <- "chr18"
-   resolution <- 50000
-   options(scipen = 999)
-   hicdata_path = "./data/001_chr18_50Kb-ICE.mat"
-   hicmat <- DataLoad(hicdata_path, bsparse = F, species, chr, resolution)
-   result <- TADBD(hicmat)
-   Output(chr, resolution, hicmat, result)
+    rm(list=ls())
+    library(TADBD)
+    species <- "hg19"
+    chr <- "chr18"
+    resolution <- 50000
+    options(scipen = 999)
+    hicdata_path = "./data/001_chr18_50Kb-ICE.mat"
+    hicmat <- DataLoad(hicdata_path, bsparse = F, species, chr, resolution)
+    result <- TADBD(hicmat)
+    Output(chr, resolution, hicmat, result)
          
