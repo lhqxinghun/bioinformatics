@@ -18,7 +18,7 @@ Abstract<br>
  　   TADBD(R package, )<br>
   Example:
  
-        rm(list=ls())
+      rm(list=ls())
 	library(TADBD)
 	species <- "hg19"
 	chr <- "chr18"
