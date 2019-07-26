@@ -1,4 +1,4 @@
-“real data”：
+Real data:
 
 A total of 24 experimental Hi-C contact matrixes, involving different cell lines, chromosomes and resolutions, were derived from Rao’s study (Rao, et al., 2014), and then normalized by ICE.
 
