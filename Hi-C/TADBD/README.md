@@ -11,7 +11,7 @@ Abstract<br>
 		
 2> TADBD.R<br>		
  Function:<br>
- 　 Detection of TAD boundaries<br> 
+ 　 TAD boundary detection<br> 
  Depends:<br>
  　 R (>= 3.5.1)<br>
  　 TADBD(R package, )<br>
