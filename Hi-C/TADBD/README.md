@@ -16,7 +16,7 @@ Abstract<br>
   Depends:<br>
  　   R (>= 3.5.1)<br>
  　   TADBD(R package, )<br>
- Example:
+  Example:
  
       rm(list=ls())
       library(TADBD)
