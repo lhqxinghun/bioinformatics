@@ -1,0 +1,79 @@
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicda/multiHiCcompare")
+source("sparse2matrix.R")
+source("CPM.R")
+
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/50K", 4, species="hg19", chr="chr1", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr1/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/50K", 4, species="hg19", chr="chr1", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr1/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr8/50K", 4, species="hg19", chr="chr8", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr8/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr8/50K", 4, species="hg19", chr="chr8", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr8/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", 4, species="hg19", chr="chr14", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr14/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr14/50K", 4, species="hg19", chr="chr14", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr14/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/50K", 4, species="hg19", chr="chr18", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr18/50K/Raw")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/50K", 4, species="hg19", chr="chr18", resolution=50000, bsparse=TRUE, bcpm=FALSE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr18/50K/Raw")
+
+
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicda/multiHiCcompare")
+source("sparse2matrix.R")
+source("gethicobjlist.R")
+source("normultiHiCcomparefun.R")
+
+hicnormalized <- normultiHiCcomparefun(
+  dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/50K", 
+  dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/50K",
+  dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr1/50K/multiHiCcompare",
+  dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr1/50K/multiHiCcompare",
+  species="hg19", chr="chr1", resolution=50000)
+hicnormalized <- normultiHiCcomparefun(
+  dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr8/50K", 
+  dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr8/50K",
+  dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr8/50K/multiHiCcompare",
+  dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr8/50K/multiHiCcompare",
+  species="hg19", chr="chr8", resolution=50000)
+hicnormalized <- normultiHiCcomparefun(
+  dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", 
+  dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr14/50K",
+  dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr14/50K/multiHiCcompare",
+  dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr14/50K/multiHiCcompare",
+  species="hg19", chr="chr14", resolution=50000)
+hicnormalized <- normultiHiCcomparefun(
+  dirin1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/50K", 
+  dirin2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/50K",
+  dirout1="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr18/50K/multiHiCcompare",
+  dirout2="/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr18/50K/multiHiCcompare",
+  species="hg19", chr="chr18", resolution=50000)
+
+
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicda/multiHiCcompare")
+source("sparse2matrix.R")
+source("CPM.R")
+
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr1/50K", 4, species="hg19", chr="chr1", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr1/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr1/50K", 4, species="hg19", chr="chr1", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr1/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr8/50K", 4, species="hg19", chr="chr8", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr8/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr8/50K", 4, species="hg19", chr="chr8", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr8/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr14/50K", 4, species="hg19", chr="chr14", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr14/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr14/50K", 4, species="hg19", chr="chr14", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr14/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/GM12878/chr18/50K", 4, species="hg19", chr="chr18", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr18/50K/Raw-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/dump/IMR90/chr18/50K", 4, species="hg19", chr="chr18", resolution=50000, bsparse=TRUE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr18/50K/Raw-CPM")
+
+
+
+rm(list=ls())
+setwd("/home/biology/liucongyi/Hic/hicda/multiHiCcompare")
+source("sparse2matrix.R")
+source("CPM.R")
+
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr1/50K/multiHiCcompare", 4, species="hg19", chr="chr1", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr1/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr1/50K/multiHiCcompare", 4, species="hg19", chr="chr1", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr1/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr8/50K/multiHiCcompare", 4, species="hg19", chr="chr8", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr8/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr8/50K/multiHiCcompare", 4, species="hg19", chr="chr8", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr8/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr14/50K/multiHiCcompare", 4, species="hg19", chr="chr14", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr14/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr14/50K/multiHiCcompare", 4, species="hg19", chr="chr14", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr14/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr18/50K/multiHiCcompare", 4, species="hg19", chr="chr18", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/GM12878/chr18/50K/multiHiCcompare-CPM")
+CPM("/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr18/50K/multiHiCcompare", 4, species="hg19", chr="chr18", resolution=50000, bsparse=FALSE, bcpm=TRUE, bmodified=TRUE, "/media/biology/2b52abd3-7feb-4bc9-8c84-a8408d93f7ec/hicdata/GM12878 VS IMR90/IMR90/chr18/50K/multiHiCcompare-CPM")
+
