@@ -1,1 +1,0 @@
-TADfit: a Multivariate Linear Regression Model for profiling of Hierarchical Chromatin Domains on replicate Hi-C Data
