@@ -1,0 +1,3 @@
+This folder outputs the temporary values in solving the model for later regression analysis.
+p.out restores the predicted IFs in iterative solving process and y.out resotres the original IFs.
+To output these temporary files, users need to open the project and run it in Rstudio instead of installing the R package. 
