@@ -78,10 +78,7 @@ start <- 0
 end <- 5000000
 TADs <- calltad(dirin, resolution, start, end)  #Other parameters are default
 ```
-## Reference
-xxx
-
 
 ## Contact
-xxx
+Erhu Liu (liuerhu@stu.xjtu.edu.cn); Hongqiang Lyu (hongqianglv@mail.xjtu.edu.cn)
 
