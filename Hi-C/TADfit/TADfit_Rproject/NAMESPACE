@@ -1,0 +1,4 @@
+useDynLib(TADfit, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
+importFrom("utils", "head", "read.table")
